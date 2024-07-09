@@ -1,0 +1,28 @@
+.menu{
+    background-color: #2d6df6;
+}
+.banner{
+    background-image: url('../img/familia\ full.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 25%;
+    
+}
+.botonChat{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+.cajaChat{
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #e7e7e7;
+    z-index: 1;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
