@@ -26,3 +26,8 @@
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
 }
+.textoChat{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+}
