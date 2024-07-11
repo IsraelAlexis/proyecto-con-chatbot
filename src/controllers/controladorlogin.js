@@ -23,9 +23,9 @@
   const analytics = getAnalytics(app);
 
   //rutina para detectar clic en el boton de google
-  let botonLogin=document.getElementById("ingresoGmail")
+  let botonlogin=document.getElementById("ingresoGmail")
 
-  botonLogin.addEventListener("click",function(){
+  botonlogin.addEventListener("click",function(){
     const auth = getAuth();
     const provider=new GoogleAuthProvider()
 
