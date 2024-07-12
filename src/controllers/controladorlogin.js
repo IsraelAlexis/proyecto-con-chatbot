@@ -1,20 +1,24 @@
- // Import the functions you need from the SDKs you need
+  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
-  import { getAuth,signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js'
+  
+  import { getAuth,signInWithPopup,GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js'
+
+
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyBGMmDYHLeucdFcGyJ4ozFy5fFoKf8238Q",
-    authDomain: "loginsuradualia.firebaseapp.com",
-    projectId: "loginsuradualia",
-    storageBucket: "loginsuradualia.appspot.com",
-    messagingSenderId: "761080312563",
-    appId: "1:761080312563:web:911ce887e7939df6d67d86",
-    measurementId: "G-3395FE6B35"
+    apiKey: "AIzaSyATaFS3y2HtZA4y-3WQm7fRtbsaAycB6uU",
+    authDomain: "loginsuradualjjg.firebaseapp.com",
+    projectId: "loginsuradualjjg",
+    storageBucket: "loginsuradualjjg.appspot.com",
+    messagingSenderId: "270841800332",
+    appId: "1:270841800332:web:99ae746100c68433effda9",
+    measurementId: "G-3NGP4DKQEW"
   };
 
   // Initialize Firebase
@@ -23,14 +27,14 @@
   const analytics = getAnalytics(app);
 
   //rutina para detectar clic en el boton de google
-  let botonlogin=document.getElementById("ingresoGmail")
+  let botonLogin=document.getElementById("ingresoGmail")
 
-  botonlogin.addEventListener("click",function(){
+  botonLogin.addEventListener("click",function(){
     const auth = getAuth();
-    const provider=new GoogleAuthProvider()
+    const provider= new GoogleAuthProvider()
 
-    signInWithPopup(auth, provider) 
-  .then((result) => {
+    signInWithPopup(auth, provider)
+    .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
