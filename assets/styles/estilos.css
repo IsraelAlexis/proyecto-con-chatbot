@@ -25,11 +25,29 @@
     z-index: 1;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
+    display: none;
+}
+.mensajeChat{
+    overflow-y: auto;
+    height: 85%;
+    padding-bottom: 20px;
+    color: #2d6df6;
+    font-weight: 600;
+}
+.areaTextoChat{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+}
+.botonSend{
+    cursor: pointer;
 }
 .textoChat{
     position: absolute;
     bottom: 0;
     width: 95%;
+    
 }
 .botonsura{
     background-color: #759ef7;
