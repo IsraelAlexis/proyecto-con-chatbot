@@ -1,24 +1,32 @@
-let botonSend=document.getElementById('botonSend')
-let textoChat=document.getElementById('textoChat')
-let mensajesChat=document.getElementById('mensajeChat')
+let url="http://localhost:8000/Isra"
 
-let preguntas=[
-    "¿cual es tu nombre?",
-    "¿cuantos años tienes?",
-    "¿cual es tu pelicula favorita",
-    '¿tienes mascotas?',
-    '¿cual es tu hobby'
-]
-let respuestas=[
-    'Hola humano mi nombre es Isra',
-    'Tengo 1 año',
-    'Del crepusculo al amanecer',
-    'Si, 3 humanos',
-    'Manipular Humanos'
-]
+let peticion={
+    method:"GET"
+}
+fetch(url,peticion)
+.then(function(respuesta){
+    return respuesta.json()
+})
+.then(function(respuesta){
+    console.log(respuesta)
+    let botonSend=document.getElementById('botonSend')
+    let textoChat=document.getElementById('textoChat')
+    let mensajesChat=document.getElementById('mensajeChat')
 
-// variable para contar el numero de preguntas
-let indicePregunta=0
+    //mapear el arreglo de respuestas y preguntas
+    let preguntas=respuesta.map(function(pregunta){
+        return pregunta.pregunta
+    })
+
+    let respuestas=respuesta.map(function(respuesta){
+        return respuesta.respuesta
+    })
+
+    console.log(preguntas)
+    console.log(respuestas)
+
+    // variable para contar el numero de preguntas
+let indicePregunta=0;
 
 //funcion para detectar el inicio y desarrollo de la conversacion
 function procesarEntradaChat(){
@@ -46,3 +54,9 @@ textoChat.addEventListener("keypress",function(evento){
         procesarEntradaChat()
     }
 })
+})
+.catch(function(respuesta){
+    console.log(respuesta)
+})
+
+
