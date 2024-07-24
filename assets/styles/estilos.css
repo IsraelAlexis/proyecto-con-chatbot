@@ -2,11 +2,13 @@
     background-color: #2d6df6;
 }
 .banner{
-    background-image: url('../img/familia\ full.jpg');
+    background-image: url('../img/seguros-5.png');
     background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-attachment: scroll;
     padding: 10%;
+    height: 500px;
+    
     
 }
 .botonChat{
@@ -57,3 +59,52 @@
 a{
     color: #e7e7e7;
 }
+h3{
+    color: #0033a0;
+    font-weight: 700;
+}
+.forms{
+    margin-left: 270px;
+}
+.fondo{
+    background-color: #d4e9f6;
+}
+.sticky-note {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(61, 122, 166);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.sticky-note.active{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 5;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+  .imgmovilidad{
+    margin-left: 200px;
+  }
+  .imglogo{
+    margin-left: 100px;
+  }
+  p{
+    color: #888b8d;
+  }
+  .fondofooter{
+    background-color: #d4e9f6;
+  }
+  
